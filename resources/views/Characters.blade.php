@@ -8,8 +8,5 @@
     </div>
     @include('partials.blueButton')
   </div>
-  <div class="shop-section">
-    @include('partials.shopCard')
-  </div>
-  @include('partials.footer')
+  @include('partials.footer');
 @endsection

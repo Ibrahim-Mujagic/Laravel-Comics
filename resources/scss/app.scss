@@ -1,0 +1,226 @@
+@import "./vars.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info-page {
+    height: 30px;
+    padding: 0px 10px;
+    background-color: $main-blue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    gap: 0px 40px;
+}
+
+header {
+    height: 85px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .cont-logo {
+        img {
+            max-height: 70px;
+        }
+    }
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            a {
+                color: $main-gray;
+                text-decoration: none;
+                font-size: 1.1rem;
+                &.active {
+                    color: $main-blue;
+                    text-decoration: underline;
+                    text-underline-offset: 35px;
+                    text-decoration-thickness: 3px;
+                }
+            }
+        }
+    }
+
+    [type="text"] {
+        border: none;
+        border-bottom: 1px solid $main-blue;
+        padding: 5px 10px;
+        text-align: right;
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid $main-blue;
+        }
+    }
+}
+
+.jumbotron {
+    height: 400px;
+    position: relative;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 90% 0%;
+    }
+    .current-series {
+        position: absolute;
+        top: 90%;
+        left: 70px;
+        height: 60px;
+        width: 200px;
+        background-color: $main-blue;
+        text-align: center;
+        line-height: 60px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+
+.comics-card-section {
+    min-height: 500px;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+    .cards-container {
+        padding: 40px 30px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        .comic-card {
+            width: 200px;
+            height: 250px;
+            cursor: pointer;
+            img {
+                height: 190px;
+                width: 100%;
+                object-fit: cover;
+                margin-bottom: 5px;
+            }
+            h3 {
+                color: #fff;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+.blue-button {
+    padding: 15px 40px;
+    background-color: $main-blue;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.shop-section {
+    background-color: $main-blue;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 10px 31px;
+    .shop-card {
+        width: calc(100% / 5 - 20px);
+        min-width: 230px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+            height: 100px;
+            width: 100px;
+            object-fit: contain;
+        }
+        h4 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    }
+}
+
+footer {
+    height: 400px;
+    background-image: url("../images/footer-bg.jpg");
+
+    .main-footer {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: right 15% bottom 66%;
+        background-image: url("../images/dc-logo-bg.png");
+        padding-left: 40px;
+    }
+
+    .links {
+        display: flex;
+        color: #fff;
+        padding: 35px 14px 0px 14px;
+        nav {
+            margin-right: 25px;
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+                font-size: 1.4rem;
+            }
+
+            ul {
+                list-style: none;
+                li {
+                    margin-bottom: 10px;
+                }
+                a {
+                    text-decoration: none;
+                    color: #5e5b5b;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+    .social {
+        height: 85px;
+        width: 100%;
+        background-color: $main-gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 40px;
+        button {
+            padding: 15px 24px;
+            border: 2px solid $main-blue;
+            background-color: transparent;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .cont-links {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0px 10px;
+
+            h4 {
+                color: $main-blue;
+            }
+        }
+    }
+}
