@@ -59,5 +59,12 @@ Route::get('/Shop', function () {
     return view('Shop');
 })->name('Shop');
 
+Route::get('/detail-comic/{id}',function($id){
+    $comicsCards = config('db.comicsCards');
+    $comics_get = array_filter($comicsCards, fn($comic) => $comic['id'] == $id); 
+    $first_key = array_key_first($comics_get); 
+    $comics_filtered = $comicsCards[$first_key];
 
+    return view('detail',compact('comics_filtered'));
+})->name('comic_detail');
 
